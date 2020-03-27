@@ -1,0 +1,29 @@
+
+	html, body {
+		width: 100%;
+		height: 100%;
+	}
+
+	* {
+		padding: 0;
+		margin: 0;
+	}
+
+	* > body {
+		display: block;
+		font-family: "Lucida Console";		
+	}
+	
+	.container {
+		height: 100%;
+		width: 100%;
+	}
+
+	.game-card {
+		margin-left: 25%;
+		margin-right: 25%;
+		text-align: center;
+	}
+	.game-card h2 {
+		padding-top: 10%;
+	}
