@@ -17,4 +17,5 @@ setInterval(function () {
 
 setInterval(function () {
   Tomato.decreaseVelocity();
+  SaveFile.save();
 }, 500);

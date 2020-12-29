@@ -19,7 +19,6 @@ class Tomato {
 
   static increaseVelocity() {
     SaveFile.current.turningVelocity += 0.2;
-    SaveFile.save();
   }
 
   static increaseScore() {
