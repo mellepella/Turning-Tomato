@@ -1,7 +1,8 @@
 class UserInterface {
-	static displayScore(score) {
-		const scoreElem = document.getElementById("score");
+  static displayScore(score) {
+    const scoreElem = document.getElementById("score");
 
-		scoreElem.textContent = score;
-	}
+    scoreElem.textContent = SaveFile.current.score;
+  }
 }
+
