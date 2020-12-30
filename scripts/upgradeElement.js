@@ -16,6 +16,7 @@ class UpgradeElement {
     createElement("div", {
       parent: wrapper,
       id: this.upgrade.name,
+      className: { upgrade: true },
       children: [
         ["h2", { innerText: this.upgrade.name }],
         ["p", { innerText: this.upgrade.description }],
