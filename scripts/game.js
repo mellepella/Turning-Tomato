@@ -4,7 +4,9 @@ class Game {
   }
 
   static scene() {
-    UserInterface.displayScore(score);
+    UserInterface.displayScore();
+    UserInterface.displayGold();
+    UserInterface.renderUpgrades();
     Tomato.update();
   }
 }
@@ -19,3 +21,12 @@ setInterval(function () {
   Tomato.decreaseVelocity();
   SaveFile.save();
 }, 500);
+
+setInterval(() => {
+  const upgradeBonus = UPGRADES.reduce(
+    (sum, upgrade) => sum + upgrade.getVelocity(),
+    0
+  );
+
+  SaveFile.current.turningVelocity += upgradeBonus;
+}, 1000);

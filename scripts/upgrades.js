@@ -1,0 +1,1 @@
+const UPGRADES = [new ItalianChef()];
