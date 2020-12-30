@@ -1,8 +1,17 @@
 class UserInterface {
-  static displayScore(score) {
-    const scoreElem = document.getElementById("score");
+  static displayGold() {
+    const goldElem = document.getElementById("gold");
 
-    scoreElem.textContent = SaveFile.current.score;
+    goldElem.textContent = SaveFile.currentGold;
+  }
+
+  static displaySps() {
+    const heading = document.getElementById("spins-per-second");
+
+    heading.textContent = `Spins/second: ${calculateSps()}`;
+  }
+
+  static renderUpgrades() {
+    UPGRADES.forEach((upgrade) => new UpgradeElement(upgrade).render());
   }
 }
-

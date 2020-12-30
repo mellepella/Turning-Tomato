@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<link rel="stylesheet" href="../styles/styles.css">
+<link rel="icon" type="image/png" href="../assets/images/tomato-blur-0.png">
+
 <title>Tomato</title>
 </head>
 <body>
 	<div class="container">
 		<div class="bg">
 			<div class="game-card">
-				<img src=../assets/images/tomato.png id="tomato-pic" width="250" height="255" onClick="Tomato.increaseVelocity()"></img>
-				<h1 class="score-board" id="score"></h1>
+				<div class="game">
+					<div class="tomato">
+						<img src=../assets/images/tomato-blur-0.png id="tomato-pic" width="250" height="255" onClick="Tomato.onClick();"></img>
+					</div>
+					<h1 id="gold"></h1>
+					<h2 id="spins-per-second"></h2>
+					<button onclick="if (confirm('Are you sure?')) { SaveFile.reset() }">Reset</button>
+				</div>
+				<div class="upgrades" id="upgrades">
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<link href="https://fonts.googleapis.com/css?family=Nunito:800&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="../styles/styles.css">
-
+	
+	<script src=../scripts/round.js></script>
+	<script src=../scripts/calculateSps.js></script>
+	<script src=../scripts/createElement.js></script>
+	<script src=../scripts/upgradeElement.js></script>
+	<script src=../scripts/upgrade.js></script>
+	<script src=../scripts/upgrades.js></script>
 	<script src=../scripts/saveFile.js></script>
 	<script src=../scripts/userInterface.js></script>
 	<script src=../scripts/tomato.js></script>
