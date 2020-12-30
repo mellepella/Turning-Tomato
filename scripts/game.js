@@ -1,11 +1,20 @@
+const UPDATE_INTERVAL = 10;
+
 class Game {
   static update() {
+    SaveFile.current.turningVelocity =
+      SaveFile.current.upgradeVelocity + SaveFile.current.clickVelocity;
     this.scene();
+  }
+
+  static pause() {
+    Game.isPaused = true;
   }
 
   static scene() {
     UserInterface.displayGold();
     UserInterface.renderUpgrades();
+    UserInterface.displaySps();
     Tomato.update();
   }
 }
@@ -14,7 +23,7 @@ SaveFile.load();
 
 setInterval(function () {
   Game.update();
-}, 10);
+}, UPDATE_INTERVAL);
 
 setInterval(function () {
   Tomato.decreaseVelocity();
@@ -27,5 +36,5 @@ setInterval(() => {
     0
   );
 
-  SaveFile.current.turningVelocity += upgradeBonus;
+  SaveFile.current.upgradeVelocity = upgradeBonus;
 }, 1000);

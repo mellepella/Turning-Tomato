@@ -12,13 +12,13 @@ class Tomato {
   }
 
   static decreaseVelocity() {
-    if (SaveFile.current.turningVelocity > 0.2) {
-      SaveFile.current.turningVelocity -= 0.1;
+    if (SaveFile.current.clickVelocity > 0.2) {
+      SaveFile.current.clickVelocity -= 0.1;
     }
   }
 
   static increaseVelocity() {
-    SaveFile.current.turningVelocity += 0.2;
+    SaveFile.current.clickVelocity += 0.2;
   }
 
   static increaseScore() {

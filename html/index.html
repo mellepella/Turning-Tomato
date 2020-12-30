@@ -12,6 +12,8 @@
 				<div class="tomato">
 					<img src=../assets/images/tomato.png id="tomato-pic" width="250" height="255" onClick="Tomato.increaseVelocity()"></img>
 					<h1 id="gold"></h1>
+					<h2 id="spins-per-second"></h2>
+					<button onclick="if (confirm('Are you sure?')) { SaveFile.reset() }">Reset</button>
 				</div>
 				<div class="upgrades" id="upgrades">
 				</div>
@@ -23,14 +25,15 @@
 
 	<link rel="stylesheet" href="../styles/styles.css">
 
+	<script src=../scripts/round.js></script>
+	<script src=../scripts/calculateSps.js></script>
 	<script src=../scripts/createElement.js></script>
 	<script src=../scripts/upgradeElement.js></script>
+	<script src=../scripts/upgrade.js></script>
+	<script src=../scripts/upgrades.js></script>
 	<script src=../scripts/saveFile.js></script>
 	<script src=../scripts/userInterface.js></script>
 	<script src=../scripts/tomato.js></script>
-	<script src=../scripts/upgrade.js></script>
-	<script src=../scripts/italianChef.js></script>
-	<script src=../scripts/upgrades.js></script>
 	<script src=../scripts/game.js></script>
 </body>
 </html>
