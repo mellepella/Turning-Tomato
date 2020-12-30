@@ -8,7 +8,23 @@ class Tomato {
 
   static rotate() {
     SaveFile.current.rotationDegrees += SaveFile.current.turningVelocity;
+    Tomato.showBlur();
     tomatoImage.style.transform = `rotate(${SaveFile.current.rotationDegrees}deg)`;
+  }
+
+  static showBlur() {
+    Tomato.currentIndex = Tomato.currentIndex || 0;
+    const blurCount = 4;
+    const velocityRoof = 50;
+    const index = round(
+      (SaveFile.current.turningVelocity / velocityRoof) * blurCount,
+      0
+    );
+
+    if (index > Tomato.currentIndex) {
+      Tomato.currentIndex = index;
+      tomatoImage.src = `../assets/images/tomato-blur-${index}.png`;
+    }
   }
 
   static decreaseVelocity() {
