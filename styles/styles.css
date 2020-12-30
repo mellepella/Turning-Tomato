@@ -32,8 +32,15 @@ button:hover {
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
+#tomato-pic {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: height 0.05s, width 0.05s;
+}
+
 .upgrades {
-  height: 22rem;
+  height: 25rem;
   background-color: rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   overflow-x: hidden;
@@ -55,10 +62,15 @@ button:hover {
 }
 
 .tomato {
+  position: relative;
+  height: 18rem;
+}
+
+.game {
   width: 90rem;
 }
 
-.tomato > * {
+.game > * {
   margin: 1rem;
 }
 
@@ -84,7 +96,7 @@ button:hover {
   left: 50%;
   top: 45%;
   transform: translate(-50%, -50%);
-  height: fit-content;
+  height: 30rem;
   width: 40%;
   border-radius: 2px;
   padding: 50px;

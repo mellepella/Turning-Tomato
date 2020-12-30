@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="icon" type="image/png" href="../assets/images/tomato.png">
+<link rel="stylesheet" href="../styles/styles.css">
 
 <title>Tomato</title>
 </head>
@@ -9,8 +10,10 @@
 	<div class="container">
 		<div class="bg">
 			<div class="game-card">
-				<div class="tomato">
-					<img src=../assets/images/tomato.png id="tomato-pic" width="250" height="255" onClick="Tomato.increaseVelocity()"></img>
+				<div class="game">
+					<div class="tomato">
+						<img src=../assets/images/tomato.png id="tomato-pic" width="250" height="255" onClick="Tomato.onClick();"></img>
+					</div>
 					<h1 id="gold"></h1>
 					<h2 id="spins-per-second"></h2>
 					<button onclick="if (confirm('Are you sure?')) { SaveFile.reset() }">Reset</button>
@@ -23,8 +26,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Nunito:800&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="../styles/styles.css">
-
+	
 	<script src=../scripts/round.js></script>
 	<script src=../scripts/calculateSps.js></script>
 	<script src=../scripts/createElement.js></script>
