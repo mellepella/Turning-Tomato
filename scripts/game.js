@@ -4,7 +4,6 @@ class Game {
   }
 
   static scene() {
-    UserInterface.displayScore();
     UserInterface.displayGold();
     UserInterface.renderUpgrades();
     Tomato.update();
